@@ -1,0 +1,26 @@
+{
+    "name": "mini-project",
+    "version": "1.0.0",
+    "description": "mini project for databases and the web",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js",
+        "devStart": "nodemon -e js,ejs,css,html index.js"
+    },
+    "keywords": [],
+    "author": "Victoria Isabella Espinoza García",
+    "license": "ISC",
+    "dependencies": {
+        "ejs": "^3.1.8",
+        "express": "^4.18.2"
+    },
+    "engines": {
+        "npm": ">=8.0.0",
+        "node": ">=16.0.0"
+    },
+    "devDependencies": {
+        "eslint": "^8.54.0",
+        "nodemon": "^2.0.22"
+    }
+}
