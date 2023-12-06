@@ -1,21 +1,33 @@
 const express = require("express");
+const bcrypt = require("bcrypt");
+const mysql = require('mysql');
+var ejs = require('ejs')
+
+console.log("Imported all modules successfully");
+
 const app = express();
 const port = 3000;
 
-const userRoutes = require("./routes/user");
-const aboutRoutes = require("./routes/about");
+// TODO create connection to database
 
+
+//Templating engine
 app.set("view engine", "ejs");
+app.engine('html', ejs.renderFile);
 
-// links to other parts of the site go here (in this case, Authors and Readers thingy)
-app.get("/", (req, res) =>
-{
-    //res.render("index.js")
-    res.send("Hello thing!")
-});
+// Views folder
+app.set("views", __dirname + "/views");
 
-app.use("/about", aboutRoutes);
-app.use("/user", userRoutes);
+// Routes
+require("./routes/main")(app, bcrypt);
 
-app.listen(port, () => { console.log(`mortal, your app is listening on port ${port}!`); });
+// Start web app
+app.listen(port, () => { console.log(`hello! your app is listening on port ${port}!`); });
+
+
+
+
+
+
+
 
