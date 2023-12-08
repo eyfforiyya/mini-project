@@ -28,10 +28,10 @@ module.exports = function (app, bcrypt)
     });
 
     // Register user
-    app.get("/register", (req, res) =>
-    {
-        res.render("register.ejs");
-    });
+    // app.get("/register", (req, res) =>
+    // {
+    //     res.render("register.ejs");
+    // });
 
     // Search
     app.get("/search", (req, res) =>
@@ -40,10 +40,10 @@ module.exports = function (app, bcrypt)
     });
 
     // Search result
-    app.get("/search-result", (req, res) =>
-    {
-        // TODO add search result page
-    });
+    // app.get("/search-result", (req, res) =>
+    // {
+    //     // TODO add search result page
+    // });
 
 
 
