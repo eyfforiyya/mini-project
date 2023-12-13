@@ -1,6 +1,8 @@
 module.exports = function (app, bcrypt)
 {
     // TODO Session access
+    // https://www.npmjs.com/package/express-session
+
     const redirectLogin = (req, res, next) =>
     {
         if (!req.session.userId)
@@ -14,7 +16,6 @@ module.exports = function (app, bcrypt)
     }
 
     // Route handling
-
     // Home
     app.get("/", (req, res) =>
     {
@@ -28,10 +29,10 @@ module.exports = function (app, bcrypt)
     });
 
     // Register user
-    // app.get("/register", (req, res) =>
-    // {
-    //     res.render("register.ejs");
-    // });
+    app.get("/register", (req, res) =>
+    {
+        res.render("register.ejs");
+    });
 
     // Search
     app.get("/search", (req, res) =>
@@ -44,6 +45,12 @@ module.exports = function (app, bcrypt)
     // {
     //     // TODO add search result page
     // });
+
+    // Not found
+    app.get("*", (req, res) =>
+    {
+        res.send("404! This page doesn't exist :(");
+    });
 
 
 
