@@ -1,8 +1,5 @@
-http://localhost:3000/
+Start the app using:
 
-https://newsapi.org/docs/client-libraries/node-js
-
-https://dev.to/jahongir2007/creating-a-login-and-registration-form-with-nodejs-expressjs-and-mysql-database-160n
+node index.js
 
 
-https://medium.com/@anandam00/build-a-secure-authentication-system-with-nodejs-and-mongodb-58accdeb5144
