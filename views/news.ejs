@@ -1,0 +1,15 @@
+<div class="container col-7">
+    <div class="row">
+        <% for (const article of content.articles) { %>
+            <div class="col-12 mt-3">
+                <h2>
+                    <%= article.title %>
+                </h2>
+                <p>
+                    <%= article.description %>
+                </p>
+                <a href="<%= article.url %>" target="_blank">Read More</a>
+            </div>
+            <% } %>
+    </div>
+</div>

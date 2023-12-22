@@ -3,7 +3,7 @@ const about = express.Router();
 
 about.get("/", (req, res, next) =>
 {
-    res.render("about"); //inside views folder
+    res.render("about", { title: "About" }); //inside views folder
 });
 
 module.exports = about;

@@ -4,12 +4,20 @@ const bcrypt = require("bcrypt");
 // Describe the information that will be stored for a single user. his will be the structure for Users
 const userSchema = new mongoose.Schema(
     {
-        username: {
+        firstName: {
+            type: String,
+            required: true,
+        },
+        lastName: {
+            type: String,
+            required: true,
+        },
+        email: {
             type: String,
             required: true,
             unique: true
         },
-        email: {
+        username: {
             type: String,
             required: true,
             unique: true

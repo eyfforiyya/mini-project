@@ -1,20 +1,17 @@
 const express = require("express");
-const parser = require("body-parser");
-// let encoder = parser.urlencoded({ extended: false });
-const register = express.Router();
+const { register } = require("../controllers/authControl");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
+const User = require("../models/user");
 
-register.get("/", (req, res, next) =>
+const registrationRouter = express.Router();
+
+registrationRouter.get("/", (req, res, next) =>
 {
-    res.render("register");
+    res.render("register", { title: "Register!" });
 });
 
-// register.post("register", encoder, (req, res) =>
-// {
-//     var firstName = req.body.firstName;
-//     var lastName = req.body.lastName;
-//     var username = req.body.username;
-//     var password = req.body.password;
-// });
+// registrationRouter.post("/register", register);
 
-module.exports = register;
+module.exports = registrationRouter;
 
