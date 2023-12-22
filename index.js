@@ -17,8 +17,6 @@ app.use(express.json());
 // Connect to the database
 connectDB();
 
-
-
 //Templating engine
 app.set('views', './views');
 app.set("view engine", "ejs");

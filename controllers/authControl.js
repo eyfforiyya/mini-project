@@ -1,6 +1,10 @@
-const jwt = require("jsonwebtoken");
+// const jwt = require("jsonwebtoken");
+const express = require("express");
 const bcrypt = require("bcrypt");
 const User = require("../models/user");
+
+express.urlencoded({ extended: true });
+express.json();
 
 // If user is registered already, log in
 const login = async (req, res, next) =>

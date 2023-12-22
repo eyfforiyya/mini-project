@@ -1,5 +1,8 @@
+const express = require("express");
 const jwt = require("jsonwebtoken");
 const User = require("../models/user");
+express.urlencoded({ extended: true });
+express.json();
 
 const authenticate = async (req, res, next) =>
 {
